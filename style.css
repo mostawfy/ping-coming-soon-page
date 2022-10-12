@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  font-family: "Libre Franklin", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: var(--gray);
+  font-size: 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+main h1 {
+  font-weight: 300;
+  margin-bottom: 0;
+  font-size: 48px;
+  margin-top: 4rem;
+}
+
+main h1 span {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+main > p {
+  color: var(--dark-blue);
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 1rem 0 4rem;
+}
+
+form div {
+  flex: 0.8;
+}
+
+form input {
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--pale-blue);
+  border-radius: 25px;
+  width: 100%;
+}
+
+form.error input {
+  border-color: var(--light-red);
+}
+
+form div p {
+  font-size: 12px;
+  text-align: left;
+  margin-left: 1.6rem;
+  font-style: italic;
+  color: var(--light-red);
+  margin-top: 0.3rem;
+  display: none;
+}
+
+form.error div p {
+  display: block;
+}
+
+form input::placeholder {
+  color: var(--pale-blue);
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  background-color: var(--blue);
+  padding: 1rem 4rem;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  margin-left: 0.5rem;
+  box-shadow: 0 5px 10px hsla(223, 87%, 63%, 0.4);
+  flex: 0.15;
+  font-weight: 600;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 5rem;
+}
+
+footer ul li {
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsla(0, 0%, 59%, 0.3);
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+footer ul li a i {
+  color: var(--blue);
+  padding: 0.6rem;
+}
+
+footer ul li:hover {
+  background-color: var(--blue);
+}
+
+footer ul li:hover i {
+  color: #fff;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  form div,
+  form button {
+    max-width: 500px;
+    width: 80%;
+  }
+
+  main h1 {
+    font-size: 40px;
+  }
+}
